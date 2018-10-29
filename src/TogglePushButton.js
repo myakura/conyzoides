@@ -29,6 +29,15 @@ class TogglePushButton extends HTMLElement {
     this.addEventListener(`click`, event => {
       this.activate();
     });
+
+    this.addEventListener(`keypress`, event => {
+      switch (event.key) {
+        case 'Enter':
+        case ' ': // Space key
+          this.activate();
+          break;
+      }
+    });
   }
 
   connectedCallback() {
