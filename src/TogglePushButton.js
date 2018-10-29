@@ -21,9 +21,13 @@ class TogglePushButton extends HTMLElement {
     super();
   }
 
+  activate() {
+    this.pressed = !this.pressed;
+  }
+
   addListeners() {
     this.addEventListener(`click`, event => {
-      this.pressed = !this.pressed;
+      this.activate();
     });
   }
 
