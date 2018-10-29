@@ -30,6 +30,7 @@ class TogglePushButton extends HTMLElement {
   connectedCallback() {
     this.pressed;
     this.tabIndex = 0;
+    this.setAttribute(`role`, `button`);
     this.addListeners();
   }
 
