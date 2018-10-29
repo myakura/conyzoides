@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>toggle-push-button</title>
+<style>
+  toggle-push-button {
+  display: inline-flex;
+  border: 1px solid;
+  padding: 0.2em 0.5em;
+  background-color: #fff;
+  color: #222;
+  cursor: default;
+}
+toggle-push-button[pressed] {
+  background-color: #eee;
+}
+toggle-push-button::selection {
+  background-color: transparent;
+}
+</style>
+
+<body>
+
+  <toggle-push-button>Toggle!</toggle-push-button>
+
+  <script type="module">
+    import TogglePushButton from '../src/TogglePushButton.js';
+    window.customElements.define(`toggle-push-button`, TogglePushButton);
+  </script>
+</body>
