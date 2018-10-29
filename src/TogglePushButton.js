@@ -17,6 +17,19 @@ class TogglePushButton extends HTMLElement {
     }
   }
 
+  get disabled() {
+    return this.hasAttribute(`disabled`);
+  }
+  set disabled(value) {
+    if (value) {
+      this.setAttribute(`disabled`, ``);
+      this.setAttribute(`aria-disabled`, `true`);
+    } else {
+      this.removeAttribute(`disabled`);
+      this.setAttribute(`aria-disabled`, `false`);
+    }
+  }
+
   constructor() {
     super();
   }
