@@ -6,9 +6,9 @@ class TogglePushButton extends HTMLElement {
   get pressed() {
     return this.hasAttribute(`pressed`);
   }
-  set pressed(value) {
+  set pressed(isPressed) {
     // currently this is a boolean attribute and not a tri-state one
-    if (value) {
+    if (isPressed) {
       this.setAttribute(`pressed`, ``);
       this.setAttribute(`aria-pressed`, `true`);
     } else {
@@ -20,8 +20,8 @@ class TogglePushButton extends HTMLElement {
   get disabled() {
     return this.hasAttribute(`disabled`);
   }
-  set disabled(value) {
-    if (value) {
+  set disabled(isDisabled) {
+    if (isDisabled) {
       this.setAttribute(`disabled`, ``);
       this.setAttribute(`aria-disabled`, `true`);
     } else {
